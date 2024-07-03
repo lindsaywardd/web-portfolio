@@ -4,7 +4,7 @@ Welcome to my portfolio website! This repository hosts a showcase of my projects
 
 # Click the link below to view portfolio:
 
-### 
+### https://lindsaywardd.github.io/web-portfolio/ 
 
 ![Portfolio Screenshot](/imgs/PortSS.png)
 
