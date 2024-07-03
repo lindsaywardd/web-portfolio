@@ -15,7 +15,7 @@ function goToProject2() {
   }
 
 function viewResume() {
-    const resumeUrl = 'https://github.com/lindsayward/lindsayward-web-portfolio/imgs/resume.pdf.pdf'; // Replace with resume URL
+    const resumeUrl = 'https://github.com/lindsaywardd/web-portfolio/blob/main/imgs/resume.pdf.pdf'; // Replace with resume URL
     window.location.href = resumeUrl;
 }
 // so unnecessary lol
