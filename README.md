@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website! This repository hosts a showcase of my projects, skills, and experience as a software developer, including a responsive website designed with a minimalistic aesthetic.
 
-# Click the link below to view portfolio:
+## Click the link below to view portfolio:
 
 ### https://lindsaywardd.github.io/web-portfolio/ 
 

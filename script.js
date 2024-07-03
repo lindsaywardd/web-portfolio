@@ -15,8 +15,8 @@ function goToProject2() {
   }
 
 function viewResume() {
-    const resumeUrl = 'https://github.com/lindsaywardd/web-portfolio/blob/main/imgs/resume.pdf.pdf'; // Replace with resume URL
-    window.location.href = resumeUrl;
+    const resumeUrl = 'https://raw.githubusercontent.com/lindsaywardd/web-portfolio/main/imgs/resume.pdf'; // Replace with resume URL
+    window.open(resumeUrl, '_blank');
 }
 // so unnecessary lol
 function goToContactPage() {
