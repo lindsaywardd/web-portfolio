@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href= "imgs/desktop.ico" type="image/x-icon">
 
-    <title>Lindsay Ward</title>
+    <title>Lindsay Ward - Software Development</title>
 
     <!-- <link rel="icon" href= ".png" type="image/png"> -->
 
     <link rel="stylesheet" href="style.css">
+    <!-- Include EmailJS -->
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -31,6 +33,7 @@
             <div id="contact-sec1">
                 <div id="contactp1">
                     <div id="contactF">
+                        <!--  -->
                         <form id="contact-form" action="YOUR_SERVER_ENDPOINT" method="POST">
                             <h1>Let's Work Together!</h1>
                             <label for="name">Name:</label>
@@ -44,6 +47,13 @@
     
                             <input type="submit" value="Submit" id="submis">
                         </form>
+
+                        <div id="success-overlay" class="hidden">
+                            <div>
+                                <p>Message sent! I'll get back to you as soon as possible.</p>
+                                <button id="close-overlay">X</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

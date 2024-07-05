@@ -23,7 +23,8 @@ function goToContactPage() {
   window.open('contact.html', '_self');
 }
 
-// contact form
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize EmailJS with your public key
   emailjs.init("iljAuqz0PtlPbAkAL");
@@ -31,17 +32,28 @@ document.addEventListener("DOMContentLoaded", function() {
   // Form submission handler
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-      contactForm.addEventListener('submit', function(event) {
-          event.preventDefault();
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-          emailjs.sendForm('service_z2b4uod', 'template_0a4l11x', this)
-              .then(function(response) {
-                  console.log('Success!', response.status, response.text);
-                  alert('Message sent successfully!');
-              }, function(error) {
-                  console.error('Failed to send message:', error);
-                  alert('Failed to send message. Please try again later.');
-              });
-      });
+      emailjs.sendForm('service_z2b4uod', 'template_0a4l11x', this)
+        .then(function(response) {
+          console.log('Success!', response.status, response.text);
+          const successOverlay = document.getElementById('success-overlay');
+          successOverlay.style.display = 'flex';
+          document.getElementById('success-overlay').classList.add('show');
+          // alert('Message sent successfully!');
+        }, function(error) {
+          console.error('Failed to send message:', error);
+          alert('Failed to send message. Please try again later.');
+        });
+    });
+  }
+
+  const closeOverlayButton = document.getElementById('close-overlay');
+  if (closeOverlayButton) {
+    closeOverlayButton.addEventListener('click', function() {
+      document.getElementById('success-overlay').classList.add('hide');
+    });
   }
 });
+

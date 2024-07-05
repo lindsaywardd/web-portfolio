@@ -1092,3 +1092,45 @@ html::-webkit-scrollbar-thumb:hover {
     height: auto;
     padding-top: 40px;
 }
+
+.show { 
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1000;
+    margin: auto;
+    border-radius: 33px;
+}
+
+#success-overlay {
+    display: none; 
+    position: fixed; /* or 'absolute' if you prefer */
+    top: 50%;
+    left: 50%;
+    width: 50%; /* Adjust width as needed */
+    height: 50%; /* Adjust height as needed */
+    transform: translate(-50%, -50%); /* Center the element */
+}
+
+#close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: black;
+    cursor: pointer;
+    border-radius: 33px;
+    padding: .1em .3em;
+}
+
+.hide {
+    display: none;
+}
