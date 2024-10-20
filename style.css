@@ -6,8 +6,11 @@ html {
     overflow-x: hidden;
     scroll-snap-align: start;
 }
+
+
 section {
     scroll-snap-align: start;
+    justify-content: center;
 }
 
 #navbar {
@@ -179,6 +182,7 @@ p1 {
     width: 50%; /* adjust this value as needed */
     height: auto;
     align-self: flex-end;
+    overflow-x: hidden;
 }
 
 #landing-buttons {
@@ -241,7 +245,7 @@ p1 {
     margin: 0 auto;
     justify-self: center;
     justify-items: center;
-    width: 50vw;
+    /* width: 50vw; */
     display: grid;
     grid-template-areas: 
         "logo1 logo2 logo3 logo4"
@@ -251,55 +255,20 @@ p1 {
     grid-template-rows: 100px 100px; 
     
 }
-
-.skill-logos #l1 {
-    grid-area: logo1;
+.skill-logos img {
     height: 100%;
     width: auto;
 }
 
-.skill-logos #l2 {
-    grid-area: logo2;
-    height: 100%;
-    width: auto;
-}
+#l1 {grid-area: logo1;}
+#l2 {grid-area: logo2;}
+#l3 {grid-area: logo3;}
+#l4 {grid-area: logo4;}
+#l5 {grid-area: logo5;}
+#l6 {grid-area: logo6;}
+#l7 {grid-area: logo7;}
+#l8 {grid-area: logo8;}
 
-.skill-logos #l3 {
-    grid-area: logo3;
-    height: 100%;
-    width: auto;
-}
-
-.skill-logos #l4 {
-    grid-area: logo4;
-    height: 100%;
-    width: auto;
-}
-
-.skill-logos #l5 {
-    grid-area: logo5;
-    height: 100%;
-    width: auto;
-}
-.skill-logos #l6 {
-    grid-area: logo6;
-    height: 100%;
-    width: auto;
-}
-.skill-logos #l7 {
-    grid-area: logo7;
-    height: 100%;
-    width: auto;
-}
-
-.skill-logos #l8 {
-    grid-area: logo8;
-    height: 100%;
-    width: auto;
-}
-
-/* projects */
-/* Projects Section */
 /* Projects Section */
 #projects {
     padding: 40px 0;
@@ -671,31 +640,12 @@ html::-webkit-scrollbar-thumb:hover {
     width: 80%;
 }
 #about-sec1 {
-    /* flex: 1;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    text-align: center; */
     max-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
-
-/* #about-form {
-    flex: 1;
-    margin-right: 20px;
- 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 
 .highlight {
     color: #9966cc;
@@ -1133,4 +1083,228 @@ html::-webkit-scrollbar-thumb:hover {
 
 .hide {
     display: none;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 660px) {
+    section {
+        margin-top: auto;
+    }
+    #navbar p1{display: none;}
+    #navbar-end{margin-right: 10px;}
+    ul {padding-inline-start: 0px;}
+    #navbar li{padding: 0 auto;}
+    #navbar li a{font-size: 12px;}
+    
+    #landing {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    #landing-photo {
+        padding-top: 30px;
+        display: flex;
+        flex: 1 1 auto;
+        align-self: center;
+        width: 100%;
+        object-fit: fill;
+    }
+    #landing-photo img {
+        width: 100%;
+    }
+    #landing-content {
+        width: 80%;
+    }
+    #landing-content h1, #aboutMe h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 18px;
+        margin-left: 0;
+    }
+    #my1, #my2 {font-size: 16px;}
+
+    
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(50vw, 80vw));
+        gap: 5vw;
+        max-width: 90vw;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .project-info p {
+        font-size: 12px;
+        /* line-height: 1.6; */
+    }
+    #projects h2, #skills h2, #contact-info h3  { font-size: 24px;}
+    .project-title, #projects h4 { font-size: 18px;}
+
+
+
+    #skills {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+        row-gap: 20px;
+    }
+    .skill-logos {
+        display: grid;
+        margin: 0 auto;
+        justify-items: center;
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+        grid-template-rows: 15vw 15vw;
+    }
+
+    #aboutMe p {
+        font-size: 16px;
+        margin-left: 0;
+    }
+/* get rid of form format */
+    #contact-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 90%;
+        box-shadow: none;
+    }
+    #contact-sec1, #contact-sec2, #contactp1, #contactp2{
+        height: 100%;
+        width: 100%;
+    }
+    #contact-sec1, #contact-sec2 {
+        background-image: none;
+    }
+    #contact-form h1{
+        font-size: 24px;
+    }
+    #contact-form label, #contact-text p{
+        font-size: 18px;
+    }
+    #env {
+        width: 100px;
+    }
+    /* #contact-page {flex-direction: column;} */
+}
+
+/* large mobiles/ small tablets */
+@media only screen and (min-width: 661px) and (max-width: 1023px) {
+    section {
+        margin-top: auto;
+    }
+    #landing {
+        flex-direction: column;
+    }
+    #landing-photo {
+        display: flex;
+        flex: 1 1 auto;
+        width: 100%;
+        object-fit: fill;
+      
+    }
+    #landing-photo img {
+        width: 100%;
+    }
+    #landing-content {
+        width: 70%;
+        text-align: center;
+    }
+    #landing-content h1 {
+        font-size: 48px;
+    }
+    p {
+        font-size: 22px;
+        margin-left: 0;
+    }
+
+
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(30vw, 50vw));
+        gap: 20px;
+        justify-content: center;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .project-info p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    #projects h2, #skills h2, #contact-info h3  { font-size: 32px;}
+    .project-title, #projects h4 { font-size: 22px;}
+    #my1, #my2 {font-size: 18px;}
+
+
+    #skills {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-bottom: 100px;
+        row-gap: 20px;
+    }
+    .skill-logos {
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+        grid-template-rows: 12vw 12vw;
+    }
+
+
+
+    #env {
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    #landing {
+        flex-direction: column;
+    }
+    #landing-photo {
+        display: flex;
+        flex: 1 1 auto;
+        width: 100%;
+        object-fit: fill;
+      
+    }
+    #landing-photo img {
+        width: 100%;
+    }
+    #landing-content {
+        width: 70%;
+        text-align: center;
+    }
+    #landing-content h1 {
+        font-size: 48px;
+    }
+    p {
+        font-size: 28px;
+        margin-left: 0;
+    }
+    #my1, #my2 {font-size: 24px;}
+
+    .project-info p {font-size: 20px;}
+    #projects h2, #skills h2, #contact-info h3  { font-size: 32px;}
+    .project-title, #projects h4 { font-size: 24px;}
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(25vw, 50vw));
+        gap: 5vw;
+        max-width: 90vw;
+    }
+
+    .skill-logos {
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+        grid-template-rows: 12vw 12vw;
+    }
+}
+
+/* large desktops */
+@media screen and (min-width: 1600px) {
+
 }

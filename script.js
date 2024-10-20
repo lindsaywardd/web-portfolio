@@ -11,7 +11,7 @@ function goToProject2() {
   }
 
   function goToProject3() {
-    window.open('https://lindsaywardd.github.io/Stylin-Wiring-Jewelry-Web/', '_blank');
+    window.open('https://lindsaywardd.github.io/Stylin-Wiring-Jewelry-Website/', '_blank');
   }
 
 function viewResume() {
