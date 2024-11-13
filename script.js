@@ -7,7 +7,7 @@ function goToProject1() {
 }
 
 function goToProject2() {
-    window.open('https://github.com/lindsaywardd?tab=repositories', '_blank');
+    window.open('https://github.com/lindsaywardd?tab=repositories&q=ai-pacman&type=&language=&sort=', '_blank');
   }
 
   function goToProject3() {
