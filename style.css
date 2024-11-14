@@ -1089,6 +1089,11 @@ html::-webkit-scrollbar-thumb:hover {
 .hide {
     display: none;
 }
+/* second row of projects centering */
+#hide1 {
+    background: white;
+    box-shadow: none;
+}
 
 /* minor small mobile devices accounting */
 @media only screen and (max-width: 364px) { 
