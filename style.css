@@ -273,15 +273,19 @@ p1 {
 #projects {
     padding: 40px 0;
     text-align: center;
+    /* display: flex; */
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: center;
 }
+
 
 .project {
     background: #f9f9f9;
@@ -291,6 +295,7 @@ p1 {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+
 }
 
 .project:hover {
@@ -1085,10 +1090,21 @@ html::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
+/* minor small mobile devices accounting */
+@media only screen and (max-width: 364px) { 
+    #navbar li a{font-size: 8px;}
+    #aboutMe p {font-size: 14px;}
+}
 /* mobile devices */
 @media only screen and (max-width: 660px) {
     section {
         margin-top: auto;
+    }
+    
+    
+    body {
+        min-width: 100vw;
+        max-width: 100vw;
     }
     #navbar p1{display: none;}
     #navbar-end{margin-right: 10px;}
@@ -1107,6 +1123,7 @@ html::-webkit-scrollbar-thumb:hover {
         align-self: center;
         width: 100%;
         object-fit: fill;
+        max-height: 33vh;
     }
     #landing-photo img {
         width: 100%;
@@ -1124,14 +1141,14 @@ html::-webkit-scrollbar-thumb:hover {
     #my1, #my2 {font-size: 16px;}
 
     
-    .project-grid {
+    /* .project-grid {
         display: grid;
         grid-template-columns: repeat(1, minmax(50vw, 80vw));
         gap: 5vw;
         max-width: 90vw;
         margin: 0 auto;
         justify-content: center;
-    }
+    } */
 
     .project-info p {
         font-size: 12px;
@@ -1139,8 +1156,10 @@ html::-webkit-scrollbar-thumb:hover {
     }
     #projects h2, #skills h2, #contact-info h3  { font-size: 24px;}
     .project-title, #projects h4 { font-size: 18px;}
-
-
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-rows: repeat(2, auto); */
+    }
 
     #skills {
         display: flex;
@@ -1157,10 +1176,17 @@ html::-webkit-scrollbar-thumb:hover {
         grid-row-gap: 3vw;
         grid-template-rows: 15vw 15vw;
     }
-
+    #aboutMe {
+        display: flex;
+    }
     #aboutMe p {
         font-size: 16px;
         margin-left: 0;
+    }
+    #about-sec1 h1 { display: none; }
+    #about-page {
+        padding-top: 10vh;
+        margin-top: 0;
     }
 /* get rid of form format */
     #contact-page {
@@ -1189,6 +1215,9 @@ html::-webkit-scrollbar-thumb:hover {
         width: 100px;
     }
     /* #contact-page {flex-direction: column;} */
+    footer {
+        width: 100vw;
+    }
 }
 
 /* large mobiles/ small tablets */
@@ -1204,6 +1233,7 @@ html::-webkit-scrollbar-thumb:hover {
         flex: 1 1 auto;
         width: 100%;
         object-fit: fill;
+        
       
     }
     #landing-photo img {
@@ -1223,14 +1253,14 @@ html::-webkit-scrollbar-thumb:hover {
 
 
 
-    .project-grid {
-        display: grid;
+     .project-grid {
         grid-template-columns: repeat(2, minmax(30vw, 50vw));
+        grid-template-rows: repeat(3, auto);
         gap: 20px;
         justify-content: center;
         max-width: 90vw;
         margin: 0 auto;
-    }
+    } 
     .project-info p {
         font-size: 18px;
         line-height: 1.6;
@@ -1291,10 +1321,14 @@ html::-webkit-scrollbar-thumb:hover {
     .project-info p {font-size: 20px;}
     #projects h2, #skills h2, #contact-info h3  { font-size: 32px;}
     .project-title, #projects h4 { font-size: 24px;}
-    .project-grid {
+    /* .project-grid {
         grid-template-columns: repeat(2, minmax(25vw, 50vw));
         gap: 5vw;
         max-width: 90vw;
+    } */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
     }
 
     .skill-logos {
