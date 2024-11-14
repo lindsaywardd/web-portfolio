@@ -1095,6 +1095,7 @@ html::-webkit-scrollbar-thumb:hover {
     box-shadow: none;
 }
 
+
 /* minor small mobile devices accounting */
 @media only screen and (max-width: 364px) { 
     #navbar li a{font-size: 8px;}
@@ -1105,7 +1106,9 @@ html::-webkit-scrollbar-thumb:hover {
     section {
         margin-top: auto;
     }
-    
+    #hide1 {
+        display: none;
+     }
     
     body {
         min-width: 100vw;
@@ -1238,9 +1241,11 @@ html::-webkit-scrollbar-thumb:hover {
         flex: 1 1 auto;
         width: 100%;
         object-fit: fill;
-        
-      
+           
     }
+    #hide1 {
+        display: none;
+     }
     #landing-photo img {
         width: 100%;
     }
