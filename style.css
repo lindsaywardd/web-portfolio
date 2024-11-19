@@ -1346,6 +1346,9 @@ html::-webkit-scrollbar-thumb:hover {
         grid-row-gap: 3vw;
         grid-template-rows: 12vw 12vw;
     }
+    #hide1 {
+        display: none;
+     }
 }
 
 /* large desktops */
