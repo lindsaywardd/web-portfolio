@@ -1099,6 +1099,9 @@ html::-webkit-scrollbar-thumb:hover {
 /* minor small mobile devices accounting */
 @media only screen and (max-width: 364px) { 
     #navbar li a{font-size: 8px;}
+    html {
+        overflow-X: hidden;
+    }
     #aboutMe p {font-size: 14px;}
 }
 /* mobile devices */
@@ -1111,8 +1114,8 @@ html::-webkit-scrollbar-thumb:hover {
      }
     
     body {
-        min-width: 100vw;
         max-width: 100vw;
+        overflow-X: hidden;
     }
     #navbar p1{display: none;}
     #navbar-end{margin-right: 10px;}
@@ -1148,25 +1151,13 @@ html::-webkit-scrollbar-thumb:hover {
     }
     #my1, #my2 {font-size: 16px;}
 
-    
-    /* .project-grid {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(50vw, 80vw));
-        gap: 5vw;
-        max-width: 90vw;
-        margin: 0 auto;
-        justify-content: center;
-    } */
-
     .project-info p {
         font-size: 12px;
-        /* line-height: 1.6; */
     }
     #projects h2, #skills h2, #contact-info h3  { font-size: 24px;}
     .project-title, #projects h4 { font-size: 18px;}
     .project-grid {
         grid-template-columns: repeat(1, 1fr);
-        /* grid-template-rows: repeat(2, auto); */
     }
 
     #skills {
@@ -1191,7 +1182,8 @@ html::-webkit-scrollbar-thumb:hover {
         font-size: 16px;
         margin-left: 0;
     }
-    #about-sec1 h1 { display: none; }
+    #about-sec1 h1 { font-size: 1.5em;
+    overflow: hidden; }
     #about-page {
         padding-top: 10vh;
         margin-top: 0;
